@@ -31,6 +31,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.my_row, parent, false);
         return new MyViewHolder(view);
+
     }
 
     @Override
@@ -43,7 +44,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public int getItemCount() {
 
-        return 3;
+        return images.length;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -52,7 +53,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         ImageView myImage;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            myTextView1 = itemView.findViewById(R.id.title);
+            myTextView1 = itemView.findViewById(R.id.programming_languages);
             myTextView2 = itemView.findViewById(R.id.description);
             myImage = itemView.findViewById(R.id.myImageView);
         }
